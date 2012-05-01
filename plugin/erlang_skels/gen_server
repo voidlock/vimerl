@@ -128,14 +128,13 @@ terminate(_Reason, _State) ->
 %% @private
 %% @doc
 %% Convert process state when code is changed
-%%
-%% @spec code_change(OldVsn, State, Extra) -> {ok, NewState}
 %% @end
--spec code_change(OldVsn, State, Extra) -> {ok, NewState} | {error, Reason} when
+-spec code_change(OldVsn, State, Extra) -> Result when
     OldVsn :: Vsn | {down, Vsn},
     Vsn :: term(),
     State :: term(),
     Extra :: term(),
+    Result :: {ok, NewState} | {error, Reason},
     NewState :: term(),
     Reason :: term().
 
